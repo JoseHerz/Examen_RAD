@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_Rad.Vistas.ContenidoPage">
+    <ContentPage.Content>
+        <Frame BackgroundColor="#FEFAE0" Margin="20" CornerRadius="10">
+            <StackLayout>
+
+                <Label Text="Registro:" HorizontalOptions="Start" FontSize="25" TextColor="Black" FontAttributes="Bold"/>
+
+                <Frame>
+                    <StackLayout>
+                        <Label Text="Nombre:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                        <Label  Text="{Binding nombres}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                        <Label Text="Apellido:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                        <Label Text="{Binding apellidos}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                        <Label Text="Edad:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                        <Label Text="{Binding edad}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                        <Label Text="Pais:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                        <Label Text="{Binding pais}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                        <Label Text="Telefono:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                        <Label Text="{Binding telefono}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                        <Label Text="Nota:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                        <Label Text="{Binding notas}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+                    </StackLayout>
+                </Frame>
+
+
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

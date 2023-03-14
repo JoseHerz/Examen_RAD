@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_Rad.Vistas.InicioPage">
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Registrar Contacto"
+                     Clicked="Registrar"/>
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#606c38">
+
+            <CollectionView x:Name="Agenda"
+                            Margin="15"
+                            SelectionMode="Single"
+                            SelectionChanged="Agenda_SelectionChanged"
+                            BackgroundColor="#fefae0">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#FEFAE0" CornerRadius="10" Margin="10">
+                            <StackLayout>
+                                <Label Text="Nombre:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                                <Label  Text="{Binding nombres}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                                <Label Text="Apellido:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                                <Label Text="{Binding apellidos}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                                <Label Text="Edad:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                                <Label Text="{Binding edad}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                                <Label Text="Pais:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                                <Label Text="{Binding pais}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                                <Label Text="Telefono:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                                <Label Text="{Binding telefono}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+                                <Label Text="Nota:"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                                <Label Text="{Binding notas}"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

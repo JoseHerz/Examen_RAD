@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_Rad.Vistas.PageFormulario">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#606C38">
+            <Frame BackgroundColor="#FEFAE0" CornerRadius="10" Margin="10">
+                <Image Source="https://web.ucenm.net/wp-content/uploads/2019/09/Logo-UCENM-Estilizado.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Scale="1" Aspect="AspectFit"/>
+            </Frame>
+            <Frame BackgroundColor="#FEFAE0" Margin="20" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Ingresa la siguiente informacion:" HorizontalOptions="Start" FontSize="25" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="Nombre:" HorizontalOptions="Start" FontSize="20" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="Nombre" Placeholder=" " Keyboard="Text"  FontSize="20" PlaceholderColor="Black" BackgroundColor="#DDA15E"/>
+                    <Label Text="Apellido:" HorizontalOptions="Start" FontSize="20" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="Apellido" Placeholder=" " Keyboard="Text"  FontSize="20" PlaceholderColor="Black" BackgroundColor="#DDA15E"/>
+                    <Label Text="Telefono:" HorizontalOptions="Start" FontSize="20" TextColor="Black" FontAttributes="Bold" />
+                    <Entry x:Name="Telefono" Placeholder=" " Keyboard="Numeric"  FontSize="20" PlaceholderColor="Black" BackgroundColor="#DDA15E" TextChanged="Telefono_invalido"/>
+                    <Label Text="Edad:" HorizontalOptions="Start" FontSize="20" TextColor="Black" FontAttributes="Bold" />
+                    <Entry x:Name="Edad" Placeholder=" " Keyboard="Numeric"  FontSize="20" PlaceholderColor="Black" BackgroundColor="#DDA15E"/>
+                    <Label Text="Pais:" HorizontalOptions="Start" FontSize="20" TextColor="Black" FontAttributes="Bold" />
+                    <Picker x:Name="Seleccion" Title="Selecciona una opción"  FontSize="20" TextColor="White" BackgroundColor="#DDA15E">
+                        <Picker.ItemsSource >
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Costa Rica (+506)</x:String>
+                                <x:String>El Salvador (+503)</x:String>
+                                <x:String>Guatemala (+502)</x:String>
+                                <x:String>Honduras (+504)</x:String>
+                                <x:String>Nicaragua (+505)</x:String>
+                                <x:String>Panamá (+507)</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Label Text="Nota:" HorizontalOptions="Start" FontSize="20" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="Nota" Text="{Binding Note}" PlaceholderColor="Black" BackgroundColor="#DDA15E"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <StackLayout Padding="5">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                    <Button Text="Limpiar" Clicked="Limpiar" FontSize="20" HeightRequest="70" CornerRadius="10" WidthRequest="150"  />
+                                    <Button Text="Guardar" Clicked="Guardar" FontSize="20" HeightRequest="70" CornerRadius="10" WidthRequest="150"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
